@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "3c3a9991-6129-475a-8a68-6a392ed051c6",
+		"name": "DepartmentTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Department GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54652/api/department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DepartmentName\":\"Finance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54652/api/department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DepartmentId\": 3,\r\n    \"DepartmentName\": \"Marketing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54652/api/department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54652/api/department/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"department",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54652/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EmployeeName\": \"Max\",\r\n    \"Department\": \"Support\",\r\n    \"DateOfJoining\": \"2020-11-17\",\r\n    \"PhotoFileName\": \"anonymous.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54652/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EmployeeId\": 2,\r\n    \"EmployeeName\": \"Maximus\",\r\n    \"Department\": \"Support\",\r\n    \"DateOfJoining\": \"2020-11-17\",\r\n    \"PhotoFileName\": \"anonymous.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54652/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54652/api/employee/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"employee",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploadedFile",
+							"type": "file",
+							"src": "/D:/codding/original_IMGGGGG/img3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:54652/api/employee/savefile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"employee",
+						"savefile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllDepartmentNames",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54652/api/employee/GetAllDepartmentNames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54652",
+					"path": [
+						"api",
+						"employee",
+						"GetAllDepartmentNames"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
