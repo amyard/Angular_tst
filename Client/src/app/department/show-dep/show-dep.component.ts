@@ -21,24 +21,33 @@ export class ShowDepComponent implements OnInit {
   }
 
   addClick(){
-    this.dep={
-      DepartmentId:0,
-      DepartmentName:""
+    this.dep = {
+      DepartmentId: 0,
+      DepartmentName: ""
     }
 
-    this.ModalTitle="Add Department";
-    this.ActivateAddEditDepComp=true;
+    this.ModalTitle = "Add Department";
+    this.ActivateAddEditDepComp = true;
   }
 
   editClick(item){
     this.dep = item;
     this.ModalTitle = "Edit Department";
-    this.ActivateAddEditDepComp=true;
+    this.ActivateAddEditDepComp = true;
   }
 
   closeClick(){
-    this.ActivateAddEditDepComp=false;
+    this.ActivateAddEditDepComp = false;
     this.refreshDepList();
+  }
+
+  deleteClick(item) {
+    if(confirm("Are you sure?")){
+      this.service.deleteDepartment(item.DepartmentId).subscribe(data => {
+        alert(data.toString());
+        this.refreshDepList();
+      });
+    }
   }
 
   refreshDepList(){
